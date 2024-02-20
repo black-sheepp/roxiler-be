@@ -8,7 +8,8 @@ const transactionSchema = new mongoose.Schema({
 	category: { type: String, required: true },
 	image: { type: String, required: true },
 	sold: { type: Boolean, required: true },
-	dateOfSale: { type: Date, required: true },
+	salesYear: { type: String, required: true },
+	salesMonth: { type: String, required: true },
 });
 
 const Transaction = mongoose.model("Transaction", transactionSchema);
