@@ -5,10 +5,12 @@ const PORT = process.env.PORT || 8000;
 const route = express.Router();
 const db = require("./config/mongoose");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 App.use(express.json()); 
 App.use(bodyParser.json());
 App.use(bodyParser.urlencoded({ extended: true }));
+App.use(cors());
 
 App.use("/", require("./routes"));
 
